@@ -239,7 +239,7 @@ async function startExam() {
   statusEl.innerHTML = "<h2>Generating questions, please wait for a moment (might take more than a minute)</h2>";
 
   try {
-    const res = await fetch("http://localhost:3000/api/exam", {
+    const res = await fetch("/api/exam", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ subject, total, diff, explain: showExplanation, model, key })
